@@ -20,13 +20,13 @@
                 </tr>
                 {{each list as value i}}
                 <tr>
-                    <td><a href="/myweb/html/city.html?id={{value.id}}">{{value.id}}</a></td>
+                    <td><a href="../html/city.html?id={{value.id}}">{{value.id}}</a></td>
                     <td>{{value.name}}</td>
                     <td>{{value.district}}</td>
                     <td>{{value.countryCode}}</td>
                     <td>{{value.population}}</td>
                     <td><a href="javascript:void(0)" class="del" cityid={{value.id}}>删除</a></td>
-                    <td><a href="#">修改</a></td>
+                    <td><a href="">修改</a></td>
                 </tr>
                 {{/each}}
             </table>

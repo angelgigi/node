@@ -166,8 +166,16 @@ app.post('/city/getcitylist',function (req,res) {
 
 });
  //获取一条数据
-app.post('/city/showList',function (req,res) {
-
+app.post('/city/showCity',function (req,res) {
+       var arr=response.list;
+       var city=null;
+       for(var i=0 ; i<arr.length; i++){
+           if(req.body.id==arr[i].id){
+              city=arr[i];
+               console.log(req.body.id)
+           }
+       }
+    res.end(JSON.stringify(city)); //返回id的一条数据
 });
 
 //删除方法

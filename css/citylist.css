@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+#content{
+    padding: 20px;
+}
+table{
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #bfd3ed;
+    border-collapse:collapse;
+}
+th{
+    background-color: #eaf2fe;
+}
+th, td{
+    line-height: 28px;
+    width: 12%;
+    border: 1px solid #bfd3ed;
+    border-width: 1px 0;
+    padding: 6px 0;
+}
+.btn{
+    margin-left:20px;
+    text-align: center;
+    color: #1da0dc;
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border: 1px solid #bfd3ed;
+}

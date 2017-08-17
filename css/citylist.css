@@ -5,6 +5,7 @@
 }
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 #content{
     padding: 20px;
@@ -28,9 +29,11 @@ th, td{
 .btn{
     margin-left:20px;
     text-align: center;
-    color: #1da0dc;
+    color: #fff;
+    background-color: #ff9913;
     height: 38px;
     line-height: 38px;
     width: 100px;
-    border: 1px solid #bfd3ed;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #e26e00;
 }

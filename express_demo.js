@@ -165,6 +165,10 @@ app.post('/city/getcitylist',function (req,res) {
 
 
 });
+// 修改数据
+app.post('/city/editCity',function (req,res) {
+    var arr=response.list;
+});
  //获取一条数据
 app.post('/city/showCity',function (req,res) {
        var arr=response.list;
@@ -177,7 +181,26 @@ app.post('/city/showCity',function (req,res) {
        }
     res.end(JSON.stringify(city)); //返回id的一条数据
 });
-
+//添加一条数据
+app.post('/city/addCity',function (req,res) {
+     var city=req.body;
+     var arr=response.list;
+     var idList=new Array();
+     for(var i=0 ; i<arr.length ; i++){
+         idList.push(arr[i].id);
+     }
+    idList.sort(function (a,b) {
+        return b - a;
+    });
+     var id=null;
+    if(idList.length>0){
+       // console.log(idList[0]);
+        id=idList[0]+1;
+    }
+    city.id=id;
+    result=response.list.push(city);
+    res.end(JSON.stringify(result));
+});
 //删除方法
 app.post('/city/deleteCity',function (req,res) {
     var arr=response.list;

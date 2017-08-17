@@ -1,0 +1,40 @@
+*{
+   margin: 0;
+   padding: 0;
+   font: 16px "Microsoft yahei",arial,Simsun,sans-serif;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+span{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    text-align: right;
+}
+.txt {
+    width: 298px;
+    height: 30px;
+    font: 14px/28px "Microsoft YaHei",SimSun,Tahoma,Verdana,Arial,sans-serif;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bbb #ddd #ddd #bbb;
+    box-shadow: 1px 1px 1px #ddd inset;
+}
+.form-item{
+    overflow: hidden;
+    margin-top: 30px;
+    min-height:40px ;
+}
+.register{
+    margin:40px 0 0 140px ;
+    text-align: center;
+    color: #fff;
+    background-color: #ff9913;
+    height: 38px;
+    line-height: 38px;
+    width: 170px;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px #e26e00;
+}

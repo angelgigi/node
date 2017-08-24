@@ -168,6 +168,15 @@ app.post('/city/getcitylist',function (req,res) {
 // 修改数据
 app.post('/city/editCity',function (req,res) {
     var arr=response.list;
+    var city=null;
+    for(var i=0 ; i<arr.length; i++){
+        if(req.body.id==arr[i].id){
+            arr[i]=req.body;
+            console.log(arr[i]);
+            city=arr[i];
+        }
+    }
+    res.end(JSON.stringify(city)); //返回id的一条数据
 });
  //获取一条数据
 app.post('/city/showCity',function (req,res) {
@@ -176,7 +185,7 @@ app.post('/city/showCity',function (req,res) {
        for(var i=0 ; i<arr.length; i++){
            if(req.body.id==arr[i].id){
               city=arr[i];
-               console.log(req.body.id)
+              // console.log(req.body.id)
            }
        }
     res.end(JSON.stringify(city)); //返回id的一条数据

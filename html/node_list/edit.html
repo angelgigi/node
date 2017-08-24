@@ -6,7 +6,12 @@
     <link href="../../css/register.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
-<div class="register-container">
+<input id="hdid" type="hidden" value=${user.id}>
+<div class="register-container"  >
+    <div class="form-item">
+        <span>ID</span>
+        <input type="text" class="txt" id="ID"   maxlength="20" readonly="readonly" >
+    </div>
     <div class="form-item">
         <span>Name</span>
         <input type="text" class="txt" id="Name"   maxlength="20" >
@@ -24,7 +29,7 @@
         <input type="text" class="txt" id="Population"  maxlength="20" >
     </div>
 </div>
-
+<div class="register" id="sure" ><a>确定</a></div>
 </body>
 <script  src="../../js/jquery-1.7.2.min.js" ></script>
 <script src="../../js/node_list/edit.js" ></script>

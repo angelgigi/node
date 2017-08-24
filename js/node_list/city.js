@@ -54,7 +54,7 @@ var City=(function () {
     }
     //return 公共方法
     return{
-        citylist:citylist,
+       citylist:citylist,
        getcity:getcity
     }
 })();

@@ -14,7 +14,7 @@
                     <th>name</th>
                     <th>District</th>
                     <th>CountryCode</th>
-                    <th>`</th>
+                    <th>population</th>
                     <th>Delete</th>
                     <th>Update</th>
                 </tr>
@@ -26,7 +26,7 @@
                     <td>{{value.countryCode}}</td>
                     <td>{{value.population}}</td>
                     <td><a href="javascript:void(0)" class="del" cityid={{value.id}}>删除</a></td>
-                    <td><a href="">修改</a></td>
+                    <td><a href="edit.html?id={{value.id}}">修改</a></td>
                 </tr>
                 {{/each}}
             </table>

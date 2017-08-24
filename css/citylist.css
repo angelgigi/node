@@ -37,3 +37,6 @@ th, td{
     border-radius: 3px;
     box-shadow: 0 1px 1px #e26e00;
 }
+.btn a{
+    color: #fff;
+}

@@ -40,7 +40,7 @@ var City=(function () {
             async:false,
             data:{ id: City.id},
             success:function(data) {
-                  list.push(data);
+                  list.push(JSON.parse(data).city);
             }
         });
         return list;

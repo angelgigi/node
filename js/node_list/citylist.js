@@ -9,7 +9,6 @@ var list = new Array();
 $(document).ready(function () {
     City.showList();
     City.bindEvent();
- // City.add();
 });
 
 
@@ -80,7 +79,7 @@ var City = (function () {
              async:false,
              data:{id:id},
              success:function(data) {
-                 if(id==data){
+                 if(data==1){
                      showList();
                      bindEvent();
                  }
@@ -90,25 +89,6 @@ var City = (function () {
              }
          })
      }
-    //循环输出html 下拉列表显示cityName
-    function add() {
-        var cityList=getCityList();//获取列表
-        addOption(cityList);
-        addCheckbox(cityList);
-    }
-    function addOption(cityList) {
-        for(var i=0; i<cityList.length; i++){
-            PageEl.country.append("<option>"+ cityList[i].name + "</option>")
-        }
-    }
-    //循环输出html 复选框加载Population
-    function addCheckbox(cityList) {
-        for(var i=0; i<cityList.length; i++){
-            PageEl.myform.append("<input type='checkbox' value="+cityList[i].population+">"+cityList[i].population+"</>")
-
-        }
-    }
-
     //绑定页面元素事件
     function bindEvent() {
          $(".del").each(function (i) {
@@ -122,25 +102,6 @@ var City = (function () {
                 }
             }) 
          });
-
-        // PageEl.btn_update.bind("click",function () {
-        //     updateCity();
-        // });
-/*        PageEl.country.bind("change",function () {
-                var value=$('#country option:selected').text();
-                PageEl.country_text.val(value);
-            }
-
-        );*/
-     /*   PageEl.btn.bind("click",function () {
-                for(i=0 ; i<myform.length ; i++){
-                    if (myform[i].type=="checkbox" && myform[i].checked){
-                        alert(myform[i].value)
-                    }
-                }
-            }
-
-        )*/
     }
 
     //渲染citylist
@@ -151,20 +112,6 @@ var City = (function () {
         PageEl.content.html(html);
 
     }
-
-    //     $.ajax({
-    //         type: "post",
-    //         url: "/city/updateCity",
-    //         async: false,
-    // function updateCity () {
-    //         success: function (data) {
-    //             showList();
-    //             alert(data);
-    //         },
-    //
-    //     });
-    // }
-
     //return 公共方法
     return{
         getCityList:getCityList,

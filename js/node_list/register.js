@@ -22,7 +22,12 @@ var init=(function () {
            data:user,
            async:false, //同步请求
            success:function (data) {
-              window.location.href="citylist.html"
+               if(data==1){
+                   window.location.href="citylist.html"
+               }
+              else {
+                   alert("添加失败")
+               }
            },
            error:function () {
                alert("error")

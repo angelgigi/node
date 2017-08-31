@@ -70,3 +70,48 @@ exports.delCity = function (id,success) {
     }
     request(options, callback);
 };
+exports.addCity = function (city,success) {
+    var options={
+        url: 'http://localhost:8080/city/addCity',
+        method:'POST',
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify(city),
+        encoding: 'utf8'
+    };
+    function callback(error, response, data) {
+        if (!error && response.statusCode == 200) {
+           // console.log('>>>',data);
+            success(data);
+        }
+        else
+        {
+            console.log('>>>error>>>',error);
+        }
+    }
+    request(options, callback);
+};
+exports.editCity = function (city,success) {
+    var options={
+        url: 'http://localhost:8080/city/updateCity',
+        method:'POST',
+        headers: {
+            "content-type": "application/json",
+        },
+        body: JSON.stringify(city),
+        encoding: 'utf8'
+    };
+    function callback(error, response, data) {
+        if (!error && response.statusCode == 200) {
+            console.log('>>>',data);
+            success(data);
+        }
+        else
+        {
+            console.log('>>>error>>>',error);
+        }
+    }
+    request(options, callback);
+};
+

@@ -9,22 +9,26 @@
 <div class="register-container">
    <div class="form-item">
        <span>Name</span>
-       <input type="text" class="txt" id="Name"   maxlength="20" >
+       <input type="text" class="txt" id="Name"   maxlength="20"
+              onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')">
        <i id="checkResult_name"></i>
    </div>
     <div class="form-item">
         <span>District</span>
-        <input type="text" class="txt" id="District"  maxlength="20" >
+        <input type="text" class="txt" id="District"  maxlength="20"
+               onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')">
         <i id="District_name"></i>
     </div>
     <div class="form-item">
         <span>CountryCode</span>
-        <input type="text" class="txt" id="CountryCode"  maxlength="20" >
+        <input type="text" class="txt" id="CountryCode"  maxlength="3"
+               onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')">
         <i id="CountryCode_name"></i>
     </div>
     <div class="form-item">
         <span>Population</span>
-        <input type="text" class="txt" id="Population"  maxlength="20" >
+        <input type="text" class="txt" id="Population"  maxlength="9"
+               onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste = "this.value=this.value.replace(/\D/g,'')">
         <i id="Population_name"></i>
     </div>
 </div>

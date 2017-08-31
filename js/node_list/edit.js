@@ -44,7 +44,7 @@ var init=(function () {
            async:false,
            data:{id:init.id},
            success:function (data) {
-               list.push(data);
+               list.push(JSON.parse(data).city);
            }
        });
        return list;
@@ -56,8 +56,13 @@ var init=(function () {
            url:"http://localhost:8081/city/editCity" ,
             async:false,
             data:userModel,
-            success:function () {
-                window.location.href="citylist.html"
+            success:function (data) {
+                if(data==1){
+                    window.location.href="citylist.html"
+                }
+                else {
+                    alert("删除失败")
+                }
             },
             error:function () {
                 alert("error")
@@ -85,6 +90,7 @@ var init=(function () {
     //初始化用户信息
     function initCity() {
         list=getCity(Page.hdid.val());
+
         if(list!=null){
             Page.ID.val(list[0].id);
             Page.Name.val(list[0].name);
